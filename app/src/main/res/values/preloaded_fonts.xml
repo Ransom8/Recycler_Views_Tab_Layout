@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Below, the predefined fonts for the texts in the app -->
+
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/coiny</item>
+    </array>
+</resources>

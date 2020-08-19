@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is the begin of the View Tree. I have made a Linear Layout the parent layout
+    because of it's structural capabilities -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextAppearance.AppCompat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- The Constraint Layout below holds the back button and the Leaderboard Text View -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#364751"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/imageButton">
+
+        <!-- This is the Image Button. It has been assigned to an onClick attribute of back Button -->
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="54dp"
+            android:layout_height="44dp"
+            android:background="#364751"
+            android:contentDescription="@string/backButton"
+            android:foregroundGravity="left"
+            android:onClick="@string/backButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:srcCompat="@drawable/abc_vector_test"
+            tools:layout_conversion_absoluteHeight="43dp"
+            tools:layout_conversion_absoluteWidth="206dp" />
+
+        <!-- This is the Leaderboard text view -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="348dp"
+            android:layout_height="57dp"
+            android:gravity="center|start"
+            android:text="@string/Leaderboard"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="43dp"
+            tools:layout_conversion_absoluteWidth="205dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Below is the Tab Layout that contains 3 Tab items to switch tabs and inflate new frames and the
+     Recycler view -->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbItem"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#364751"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+        android:fadingEdgeLength="2dp"
+        app:tabIndicatorColor="#8BC34A"
+        app:tabSelectedTextColor="#8BC34A"
+        app:tabTextColor="@android:color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Tab1" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Tab2" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Tab3" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- The constraint layout below, which holds the text view that contains text "Leaders" and the
+     Spinner with drop down button -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#323131"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/Leaders"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="134dp"
+            android:layout_height="45dp"
+            android:backgroundTint="#FFFFFF"
+            android:entries="@array/spinner"
+            android:focusable="auto"
+            android:nestedScrollingEnabled="true"
+            android:popupBackground="#364751"
+            android:popupElevation="@dimen/cardview_compat_inset_shadow"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Finally to contain and handle all the frames from our frame layouts, the ViewPager2 -->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- String resources for the app -->
+
+    <string name="app_name" translatable="false">Week 5 Task</string>
+    <string name="Leaderboard" translatable="false">Leaderboard</string>
+    <string name="Tab1" translatable="false">FOLLOWING</string>
+    <string name="Tab2" translatable="false">LOCAL</string>
+    <string name="Tab3" translatable="false">GLOBAL</string>
+    <string name="Leaders" translatable="false">LEADERS</string>
+    <string name="spinnerText" translatable="false">All Time</string>
+
+    <!-- String Array for Spinner -->
+
+    <string-array name="spinner">
+        <item>All Time</item>
+        <item>Nothing to see here</item>
+        <item>Nothing to see here</item>
+        <item>Nothing to see here</item>
+        <item>Nothing to see here</item>
+    </string-array>
+
+    <string name="hello_blank_fragment" translatable="false">Hello Darot, Ose. Enjoy!</string>
+    <string name="backButton" translatable="false">backButton</string>
+    <string name="name" translatable="false">Ransom Ahanmisi</string>
+    <string name="phoneNumber" translatable="false">+234******1587</string>
+    <string name="num" translatable="false">1</string>
+    <string name="imageView" translatable="false">imageView</string>
+</resources>
